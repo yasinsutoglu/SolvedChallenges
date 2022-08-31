@@ -435,7 +435,18 @@ Expected Output : 5
 // **************10**********
 // 10. Write a JavaScript function which accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
-// *********10*************
+
+// const arg = (str) =>  typeof str;
+// console.log(arg(12))
+// console.log(arg(true))
+// console.log(arg("ali"))
+// console.log(arg([]))
+// console.log(arg())
+// console.log(arg( function abc() {return 2}))
+// let fonk = function(str) { return str
+// }
+// console.log(arg(fonk("str")))
+
 // 11. Write a JavaScript function which returns the n rows by n columns identity matrix.
 // ******11*****************
 // const donusum = (str) => str.split("").reverse().join("")
@@ -462,19 +473,8 @@ Expected Output : 5
 // console.log(asalSayi(23) ? "asaldır" : "asal değildir")
 // console.log(asalSayi(2) ? "asaldır" : "asal değildir")
 // console.log(asalSayi(27) ? "asaldır" : "asal değildir")
-// ************14****************
-// tip belirleme yazma
-// const arg = (str) =>  typeof str;
-// console.log(arg(12))
-// console.log(arg(true))
-// console.log(arg("ali"))
-// console.log(arg([]))
-// console.log(arg())
-// console.log(arg( function abc() {return 2}))
-// let fonk = function(str) { return str
-// }
-// console.log(arg(fonk("str")))
-// ****************15****************
+
+// ****************14****************
 // dizi içerisinde aynı index değerlerini bulma
 // const identity = function(x) {
 //     let arr = [];
@@ -493,7 +493,7 @@ Expected Output : 5
 // }
 // console.log(identity(3))
 // console.log(identity(5))
-// **************************16*******************
+// **************************15*******************
 //Dizi de ki enbüyük 2 inci ve en kücük 2 elemanı bul
 // const sirala =function(arr) {
 //     arr.sort((a,b) => {
@@ -506,7 +506,7 @@ Expected Output : 5
 //     return newArr
 // }
 // console.log( sirala([3,5,12,56,31,9]))
-// ************************17****************
+// ************************16****************
 // perfect number bölenleriini toplamı kendisine eşit olan sayı
 // const perfectNum = function(num) {
 //     let sum = 0;
@@ -523,3 +523,196 @@ Expected Output : 5
 // console.log( perfectNum(11))
 // console.log( perfectNum(28))
 // console.log( perfectNum(496))
+
+/*--------------------------------------------*/
+// Write a JavaScript function to check whether an `input` is an array or not.
+// Test Data :
+// console.log(is_array('w3resource'));
+// console.log(is_array([1, 2, 4, 0]));
+// false
+// true
+
+//* 1.yontem
+// const isArray = (input) => Array.isArray(input);
+// console.log(isArray([1, 2, 4, 0]));
+
+//2.yontem
+// var is_array = (input) => {
+//   if (toString.call(input) === "[object Array]") return true;
+//   return false;
+// };
+// console.log(is_array("w3resource"));
+// console.log(is_array([1, 2, 4, 0]));
+
+/*--------------------------------------------*/
+// Write a JavaScript function to clone an array.
+// Test Data :
+// console.log(array_Clone([1, 2, 4, 0]));
+// console.log(array_Clone([1, 2, [4, 0]]));
+// [1, 2, 4, 0]
+// [1, 2, [4, 0]]
+
+// const cloneArray = (arr) => {
+//     const newArr = arr.slice(0);
+//      return newArr;  
+// }
+
+// console.log(cloneArray([1, 2, [4, 0]]));
+
+// let y = x.map((i) => i);
+// let y = Array.from(x);
+// let y = [...x];
+
+/*--------------------------------------------*/
+
+//  Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. 
+// Test Data :
+// console.log(first([7, 9, 0, -2]));
+// console.log(first([],3));
+// console.log(first([7, 9, 0, -2],3));
+// console.log(first([7, 9, 0, -2],6));
+// console.log(first([7, 9, 0, -2],-3));
+// Expected Output :
+// 7
+// []
+// [7, 9, 0]
+// [7, 9, 0, -2]
+// []
+
+// const firstArr = (arr , n = null) => {
+//     if(n<0){
+//         return [];
+//     }else if(arr === []){
+//         return arr
+//     }else if(n>0 && n<arr.length){
+//         return arr.slice(0,n);
+//     }else if(n > arr.length){
+//         return arr.slice(0);
+//     }else if(n === null){
+//         return arr.at(0);
+//     }
+// }
+
+// console.log(firstArr([7, 9, 0, -2]));
+
+/*--------------------------------------------*/
+// Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. 
+// Test Data :
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
+// Expected Output :
+// -2
+// [9, 0, -2]
+// [7, 9, 0, -2]
+
+// const lastElement = (arr , n = null) => {
+//     if(n<0){
+//         return [];
+//     }else if(arr === []){
+//         return arr;
+//     }else if(n>0 && n<arr.length){
+//         return arr.slice(-n);
+//     }else if(n > arr.length){
+//         return arr.slice(0);
+//     }else if(n === null){
+//         return arr.at(-1);
+//     }
+// }
+
+// console.log(lastElement([7, 9, 0, -2]));
+
+/*--------------------------------------------*/
+
+// Write a simple JavaScript program to join all elements of the following array into a string. 
+// Sample array : myColor = ["Red", "Green", "White", "Black"];
+// Expected Output :
+// "Red,Green,White,Black"
+// "Red,Green,White,Black"
+// "Red+Green+White+Black"
+
+// const myString = (arr) => {
+//      return arr.join("+");
+// }
+
+// const myColor = ["Red", "Green", "White", "Black"];
+
+// console.log(myString(myColor))
+
+/*--------------------------------------------*/
+//Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+
+// const dashedNum = (num) => {
+//     const arr =("0" + num.toString()).split("");
+
+//     for(let i=0; i<arr.length; i++){
+//          if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
+//             arr.splice(i+1,0,'-')
+//          }
+//      }
+//       return arr.join("")
+// } 
+
+// console.log(dashedNum(025468982))
+
+/*--------------------------------------------*/
+
+//Write a JavaScript program to sort the items of an array.
+//Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+//Sample Output : -4,-3,1,2,3,5,6,7,8
+
+// const sortNum = (arr) => {
+//     return arr.sort((a,b)=>a-b).join();
+// }
+
+// var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+
+// console.log(sortNum(arr1))
+
+/*--------------------------------------------*/
+
+// Write a JavaScript program to find the most frequent item of an array. 
+//Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+//Sample Output : a ( 5 times )
+
+// const mostFreq = (arr) => {
+//     let cnt = 0;
+//      let newArr = [];
+//     for(let i=0; i<arr.length;i++){              
+//         for(let j=i; j<arr.length ; j++){
+//             if(arr[i] === arr[j]){
+//                 cnt++;
+//             }
+//         }
+//          newArr.push(cnt);
+//          cnt=0;      
+//     }
+//     // console.log(newArr)
+
+//     const max = Math.max(...newArr);
+//     const index = newArr.indexOf(max);
+
+//     return `${arr[index]} , ${max} times`;
+// }
+
+// console.log(mostFreq([3, "b", 2, "a", 2, 3, 3, "a", 2, 4, 9, 2]));
+
+// //2.yontem
+// var arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+// var mf = 1;
+// var cnt = 0;
+// var item;
+// for (var i = 0; i < arr1.length; i++) {
+//   for (var j = i; j < arr1.length; j++) {
+//     if (arr1[i] == arr1[j]) cnt++;
+//     if (mf < cnt ) {
+//       mf = cnt;
+//       item = arr1[i];
+//     }
+//   }
+//   cnt = 0;
+// }
+// console.log(item + " ( " + mf + " times ) ");
+
+
+/*--------------------------------------------*/
