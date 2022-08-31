@@ -745,30 +745,30 @@ Expected Output : 5
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 //SOLUTION
-let roman = {
-    I :1,
-    V : 5,
-    X : 10,
-    L : 50,
-    C : 100,
-    D : 500,
-    M : 1000
-};
+// let roman = {
+//     I :1,
+//     V : 5,
+//     X : 10,
+//     L : 50,
+//     C : 100,
+//     D : 500,
+//     M : 1000
+// };
 
-const hesapla = (rom) => {
-  let total = 0;
-  const arr = rom.split("");
-        console.log(arr)
-    for (let i = 0; i < arr.length;i++) {
-            if(roman[arr[i]] < roman[arr[i+1]]){
-                total -= roman[arr[i]];
-            }else{
-                total += roman[arr[i]];
-            }
-     }
- return total;
-};
-console.log(hesapla("LVIII"));
+// const hesapla = (rom) => {
+//   let total = 0;
+//   const arr = rom.split("");
+//         console.log(arr)
+//     for (let i = 0; i < arr.length;i++) {
+//             if(roman[arr[i]] < roman[arr[i+1]]){
+//                 total -= roman[arr[i]];
+//             }else{
+//                 total += roman[arr[i]];
+//             }
+//      }
+//  return total;
+// };
+// console.log(hesapla("LVIII"));
 
 /*************************************** */
 //  Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
@@ -948,26 +948,57 @@ console.log(hesapla("LVIII"));
 
 // console.log(powerball())
 
+
 //! Q-8
-//? Write a Function that takes 2 parameters (amount and rate) to convert currency.
-
-
-//! Q-9
-//? Write a JavaScript function that accepts an argument and returns the type.
-
-//! Q-10
 //? You are given a string and character. Write a function to check the string and find how many
 //? times this character occurs in this string.
 //? Example:
 //? str = "Clarusway"         char = "a"       ===> result = 2 as "a" occurs 2 times in Clarusway
 
-//! Q-11
+// const times = (str, char)=>{
+//     let count = 0;
+//     for(let i = 0; i<str.length; i++){
+//         str[i]=== char && count++
+//         // if(str[i] === char){
+//         //     count++;
+//         // }
+//     }
+//     return `${str} includes ${char}; ${count} times`
+// }
+
+// console.log(times('Clarusway', 'a'));
+
+//2.Yontem
+// const times = (str,char) =>{
+//     return str.split(char).length -1
+// }
+
+//! Q-9
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
 //? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
 //? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
 
+// const perfectNums = () => {
+//     let arr = [];
+//     for(let i =1; i<=1000; i++){
+//         let sum = 0;
 
-//! Q-12
+//         for(let k=1; k < i ; k++){
+//             if(!(i%k)){
+//                 sum+=k;
+//             }
+//         }
+
+//         if(sum === i){
+//             arr.push(i);
+//         }
+//     }
+//     return arr;
+// }
+
+// console.log(perfectNums())
+
+//! Q-10
 //? Develop a guessing game. Randomly generate a number between 0-100. Ask the user to guess that number.
 //? The user should have 5 chance to guess the number.
 //? If the number entered by the user:
