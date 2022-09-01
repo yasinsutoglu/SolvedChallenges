@@ -1008,3 +1008,41 @@ Expected Output : 5
 //? If user can't find the number in 5 guess then game is lost and display the random number.
 //? Hint: you can use this code to generate random number 0-100
 //? const winingNumber = Math.round(Math.random() * 100);
+
+
+
+
+
+
+
+//********************************SORU**************************************** */
+
+// Write a JavaScript program to find the most frequent item of an array.
+// Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// Sample Output : a ( 5 times )
+
+// let arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]
+// console.log(arr1.sort());
+
+// const mostFrequent=(arr)=>{
+//     let most;
+//     let repetition=0;
+//     let count;
+//     arr=arr.sort()
+//     console.log(arr)
+//     for(let i=0;i<arr.length;i++){
+//         count=0
+//         for(let k=i;k<arr.length;k++){
+//             if(arr[i]==arr[k]){
+//                 count++
+//             }
+//         }
+//         if(count>repetition){
+//             repetition=count
+//             most=arr[i]
+//         }
+//     }
+//     return `${most} en çok tekrar eden sayıdır. ${repetition} kere tekrar etmiştir`
+// }
+
+// console.log(mostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
