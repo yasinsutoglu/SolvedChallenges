@@ -1049,21 +1049,45 @@ Expected Output : 5
 
 /******************************************************** */
 //Social Security Number Validation
-const ssnValidation = (ssn) => {
-  const ssnformat = /^(?!666|000|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$/;
-  ssn.match(ssnformat)
-    ? alert("Valid SSN Number!")
-    : alert("Invalid SSN Number");
-};
-ssnValidation("286-26-3556");
+// const ssnValidation = (ssn) => {
+//   const ssnformat = /^(?!666|000|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$/;
+//   ssn.match(ssnformat) ? alert("Valid SSN Number!"): alert("Invalid SSN Number");
+// };
+// ssnValidation("286-26-3556");
 
 /******************************************************** */
 
 // E-mail validation
-const emailValidation = (email) => {
-  const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  email.match(emailformat)
-    ? alert("Valid email address!")
-    : alert("You have entered an invalid email address!");
-};
-emailValidation("asd.asd@email.com");
+// const emailValidation = (email) => {
+//   const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//   email.match(emailformat) ? alert("Valid email address!"): alert("You have entered an invalid email address!");
+// };
+// emailValidation("asd.asd@email.com");
+
+//2.Yontem
+// let chars = "abcdefghijklmnopqrstuvwxyz0123456789_+.@";
+
+// function ValidateEmailAddress(str) {
+//   let atSymbol = 0;
+//   let dotCheck = str.length - 1 - str.lastIndexOf(".");
+//   if (dotCheck == 0 || dotCheck == 1) return `invalid . position`;
+
+//   for (const i of str.toLowerCase()) {
+//     if (i === "@") atSymbol++;
+//     if (chars.includes(i)) {
+//     } else {
+//       return `invalid character detected in email address '${i}'`;
+//     }
+//   }
+
+//   console.log(str.indexOf("@"), str.lastIndexOf("."));
+
+//   if (
+//     atSymbol > 1 ||
+//     str.indexOf("@") == 0 || !atSymbol ||  str.indexOf("@") > str.lastIndexOf(".")
+//   )
+//     return `invalid '@' count or position`;
+//   return `${str} is a valid email address`;
+// }
+
+// console.log(ValidateEmailAddress("mark.m@clarusway.com"));
