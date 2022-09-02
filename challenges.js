@@ -1046,3 +1046,24 @@ Expected Output : 5
 // }
 
 // console.log(mostFrequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
+
+/******************************************************** */
+//Social Security Number Validation
+const ssnValidation = (ssn) => {
+  const ssnformat = /^(?!666|000|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0{4})\\d{4}$/;
+  ssn.match(ssnformat)
+    ? alert("Valid SSN Number!")
+    : alert("Invalid SSN Number");
+};
+ssnValidation("286-26-3556");
+
+/******************************************************** */
+
+// E-mail validation
+const emailValidation = (email) => {
+  const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  email.match(emailformat)
+    ? alert("Valid email address!")
+    : alert("You have entered an invalid email address!");
+};
+emailValidation("asd.asd@email.com");
