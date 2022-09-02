@@ -1090,4 +1090,4 @@ Expected Output : 5
 //   return `${str} is a valid email address`;
 // }
 
-// console.log(ValidateEmailAddress("mark.m@clarusway.com"));
+// console.log(ValidateEmailAddress("asAS@cASD.com"));
