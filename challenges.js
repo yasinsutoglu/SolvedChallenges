@@ -1153,3 +1153,66 @@ Expected Output : 5
 // yöntem 2
 // const countBits = (n) => n.toString(2).split("0").join("").length; 
 // console.log(countBits(20))
+
+/***************************************************** */
+// Verilen number tipli n elemanlı dizide eksik elemanı bulma
+
+// function findMissing(normal, missing) {
+//   sumNormal = (normal.length * (normal.length + 1)) / 2;
+//   const sumWithInitial = missing.reduce((a, b) => a + b);
+//   return sumNormal - sumWithInitial;
+// }
+// console.log(findMissing([1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6]));
+
+//yontem2
+
+// let bul2 = (array) => {
+//   array = array.sort((a, b) => a - b);
+//   console.log(array);
+//   if (array[0] != 1) {
+//     return 1;
+//   } else {
+//     for (let i in array) {
+//       if (array[Number(i) + 1] - array[Number(i)] != 1) {
+//         return Number(array[i] + 1);
+//       }
+//     }
+//   }
+// };
+// console.log(bul2([10, 2, 3, 5, 6, 8, 7, 9, 4]));
+
+/*************************************************** */
+
+// verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyonu yazınız
+
+let count = (dizi) => {
+  let ilk = [];
+  let son = [];
+  dizi.forEach((element) => {
+    let count = 0;
+    let eleman = "";
+    for (let item of dizi) {
+      if (element === item) {
+        count++;
+        eleman = item;
+      }
+    }
+    ilk = [eleman, count];
+    if (!son.length) {
+      son = son.concat(ilk);
+    } else {
+      let counter = 0;
+      for (let i = 0; i < son.length; i += 2) {
+        if (son[i] !== eleman) {
+          counter++;
+        }
+      }
+      if (counter * 2 == son.length) {
+        son = son.concat(ilk);
+      }
+    }
+  });
+  return son;
+};
+let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
+console.log(count(dizi1));
