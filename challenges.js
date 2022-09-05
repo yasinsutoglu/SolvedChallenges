@@ -1091,3 +1091,65 @@ Expected Output : 5
 // }
 
 // console.log(ValidateEmailAddress("asAS@cASD.com"));
+
+/****************************************************************** */
+
+//Soruların basamaklarını carparak tek haneye indiren fonksiyonu yazınız
+
+// let tekhane = (sayi) => {
+//   sayi = "" + sayi;
+//   sayi = sayi.split("");
+//   let toplam = 1;
+//   let counter = 0;
+//   while (sayi.length > 1) {
+//     for (let i = 0; i < sayi.length; i++) {
+//       toplam *= sayi[i];
+//     }
+//     sayi = ("" + toplam).split("");
+//     toplam = 1;
+//     counter++;
+//   }
+//   return counter;
+// };
+// console.log(tekhane(999));
+
+//2.yontem
+// function persistence(num) {
+//   var times = 0;
+
+//   num = num.toString();
+
+//   while (num.length > 1) {
+//     times++;
+//     num = num
+//       .split("")
+//       .map(Number)
+//       .reduce((a, b) => a * b)
+//       .toString();
+//   }
+
+//   return times;
+// }
+
+/******************************************************** */
+
+//Verilen sayiyi binary'e dondurup icindeki 1'leri sayan fonksiyonu yazınız
+
+// let binary = (sayi) => {
+//   sayi = sayi.toString(2);
+//   console.log(sayi);
+//   sayi = ("" + sayi).split("0");
+//   let counter = 0;
+//   for (let item of sayi) {
+//     console.log("item : ", item);
+//     if (item == "1") {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// };
+// console.log(binary(20));
+
+// yöntem 2
+// const countBits = (n) => n.toString(2).split("0").join("").length; 
+// console.log(countBits(20))
