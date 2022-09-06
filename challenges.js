@@ -1181,38 +1181,141 @@ Expected Output : 5
 // };
 // console.log(bul2([10, 2, 3, 5, 6, 8, 7, 9, 4]));
 
-/*************************************************** */
+//*************************************************** */
 
 // verilen dizide hangi elemanın kaç defa geçtiğini çıktı veren fonksiyonu yazınız
 
-let count = (dizi) => {
-  let ilk = [];
-  let son = [];
-  dizi.forEach((element) => {
-    let count = 0;
-    let eleman = "";
-    for (let item of dizi) {
-      if (element === item) {
-        count++;
-        eleman = item;
-      }
-    }
-    ilk = [eleman, count];
-    if (!son.length) {
-      son = son.concat(ilk);
-    } else {
-      let counter = 0;
-      for (let i = 0; i < son.length; i += 2) {
-        if (son[i] !== eleman) {
-          counter++;
-        }
-      }
-      if (counter * 2 == son.length) {
-        son = son.concat(ilk);
-      }
-    }
-  });
-  return son;
-};
-let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
-console.log(count(dizi1));
+// let count = (dizi) => {
+//   let ilk = [];
+//   let son = [];
+//   dizi.forEach((element) => {
+//     let count = 0;
+//     let eleman = "";
+//     for (let item of dizi) {
+//       if (element === item) {
+//         count++;
+//         eleman = item;
+//       }
+//     }
+//     ilk = [eleman, count];
+//     if (!son.length) {
+//       son = son.concat(ilk);
+//     } else {
+//       let counter = 0;
+//       for (let i = 0; i < son.length; i += 2) {
+//         if (son[i] !== eleman) {
+//           counter++;
+//         }
+//       }
+//       if (counter * 2 == son.length) {
+//         son = son.concat(ilk);
+//       }
+//     }
+//   });
+//   return son;
+// };
+// let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
+// console.log(count(dizi1));
+
+//*************************************************** */
+
+// const student = {
+//   name: "David Rayy",
+//   sclass: "VI",
+//   rollno: 12,
+// };
+
+// for(let key of Object.keys(student)){
+//   console.log(key)
+// }
+
+//*************************************************** */
+
+// const  student = {
+//   name: "David Rayy",
+//   sclass: "VI",
+//   rollno: 12,
+// };
+
+// console.log(student)
+
+//  delete student["rollno"];
+//  console.log(student)
+
+//*************************************************** */
+//Write a JavaScript program to get the length of a JavaScript object
+// const student = {
+//   name: "David Rayy",
+//   sclass: "VI",
+//   rollno: 12,
+// };
+
+//1.yontem
+// let cnt = 0;
+// for(let val of Object.values(student)){
+//   cnt++;
+// }
+// console.log(cnt)
+
+//2.yontem
+// console.log(Object.values(student).length)
+
+//3.yontem
+// const len = [...Object.values(student)].length;
+// console.log(len)
+
+//4.yontem
+// let cnt=0;
+// const len = Object.keys(student).map(() => cnt++ );
+// console.log(len.length) 
+
+
+//*************************************************** */
+// Reading status true olanların author ve title'larını goster
+// const library = [
+//   {
+//     author: "Bill Gates",
+//     title: "The Road Ahead",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Steve Jobs",
+//     title: "Walter Isaacson",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Suzanne Collins",
+//     title: "Mockingjay: The Final Book of The Hunger Games",
+//     readingStatus: false,
+//   },
+// ];
+
+// for(let obj of library){
+//   if(obj["readingStatus"]){
+//     console.log(`${obj.author}=>${obj.title}`);
+//   }
+// }
+//*************************************************** */
+//The purpose of this coding challenge is to create two dice, shake them the desired number of times, and write a function that prints the results as text.
+
+// const rollDices = (num) => {
+// const numbers = ['one' , 'two' , 'three' , 'four' , 'five' ,'six'];
+// const arr = [];
+//   for(let i=0; i<num; i++){
+//     const dice1 = Math.ceil(Math.random() * 6);
+//     const dice2 = Math.ceil(Math.random() * 6);
+//     if(dice1 > dice2){
+//       arr.push(
+//         `1st dice: ${dice1}, 2nd dice: ${dice2} => '${numbers[dice2-1]}' - '${numbers[dice1-1]}' `
+//       );
+//     }else{
+//        arr.push(
+//          `1st dice: ${dice1}, 2nd dice: ${dice2} => '${numbers[dice1-1]}' - '${numbers[dice2-1]}' `
+//        );
+//     }
+    
+//   }
+//   return arr.join("\n");
+// }
+ 
+// console.log(rollDices(10))
