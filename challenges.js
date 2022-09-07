@@ -1371,6 +1371,8 @@ Input: 123456789 Output: 987654321
 
 // const createBigger = (num) =>{
 //      return Number(num.toString().split("").sort((a, b) => b - a).join(""));
+//    //  return +num.toString().split("").sort((a, b) => b - a).join("");
+//    // return ~~num.toString().split("").sort((a, b) => b - a).join("");
 // }
 // console.log(createBigger(68591293245));
 
@@ -1398,6 +1400,14 @@ If the sequence is empty, you should return 0.
 // }
  
 // console.log(evenNumMult([4,2]));
+
+//2.yontem
+// const evenNumMult = (numArr) => {
+//     return numArr.length === 0 ? 0 : numArr.reduce((sum,val,i)=> sum + (i%2 ? 0 : val),0) * numArr[numArr.length - 1];
+// }
+
+// console.log(evenNumMult([1,2,3,4,5]));
+
 
 
 //! Q-4
