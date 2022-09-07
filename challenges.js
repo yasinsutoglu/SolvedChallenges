@@ -1409,7 +1409,6 @@ If the sequence is empty, you should return 0.
 // console.log(evenNumMult([1,2,3,4,5]));
 
 
-
 //! Q-4
 /*
 Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
@@ -1419,6 +1418,13 @@ uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3,3])       == [1,2,3]
 */
 
+// const uniqueInOrder = (iterable) => {
+//     return [...iterable].filter((val, i,arr) => val !== arr[i+1]);
+// }
+
+// console.log(uniqueInOrder("AAAABBBCCDAABBB"));
+// console.log(uniqueInOrder("ABBCcAD")); 
+// console.log(uniqueInOrder([1, 2, 2, 3, 3, 3]));
 
 
 //! Q-5
@@ -1433,3 +1439,12 @@ const objD = { c: 3 }
 
 combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 */
+
+
+
+/************************************************* */
+
+//  Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+// Examples:
+// 'abc' =>  ['ab', 'c_']
+//'abcdef' => ['ab', 'cd', 'ef']
