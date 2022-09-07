@@ -1330,7 +1330,34 @@ The result may contain fives. ;-)
 The start number will always be smaller than the end number. Both numbers can be also negative!
 */
 
+// const  numOfRange = (start, end) => {
+//     let cnt=0; 
+//     for(let i = start; i <= end; i++){
+//         if (Number(i.toString().split("").at(-1)) % 5 === 0) {
+//             if(i%2 !==0){
+//                  cnt--;
+//             }         
+//         }
+//         cnt++;
+//     }    
+//     return  `Result ${cnt}`;
+// };
 
+// console.log(numOfRange(-7,12));
+
+
+//2.yontem
+// const numOfRange = (start, end) => {
+//   let cnt = 0;
+//   for (let i = start; i <= end; i++) {
+//     if (!(i.toString().includes("5"))){  //indexof(), search() kullanabilirdik.
+//          cnt++;
+//     }   
+//   }
+//   return `Result ${cnt}`;
+// };
+
+// console.log(numOfRange(-7, 12));
 
 
 //! Q-2
@@ -1343,12 +1370,9 @@ Input: 123456789 Output: 987654321
 */
 
 // const createBigger = (num) =>{
-//     let arr = num.toString().split("").sort((a,b) => b-a);
-//     // console.log(arr);
-//     return Number(arr.join(""));
+//      return Number(num.toString().split("").sort((a, b) => b - a).join(""));
 // }
-
-// console.log(createBigger(9685123245));
+// console.log(createBigger(68591293245));
 
 
 //! Q-3
@@ -1358,6 +1382,24 @@ Indices in sequence start from 0.
 If the sequence is empty, you should return 0.
 */
 
+// const evenNumMult = (numArr) => {
+//     let sum = 0;
+//     if(numArr.length === 0 ){
+//         return 0;
+//     }else if(numArr.length === 1){
+//         return numArr.at(-1);
+//     }else{
+//         for (let i = 0; i < numArr.length-1; i += 2) {
+//           sum += numArr[i] * numArr.at(-1);
+//           console.log(sum)
+//         }
+//         return sum;
+//     }    
+// }
+ 
+// console.log(evenNumMult([4,2]));
+
+
 //! Q-4
 /*
 Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
@@ -1366,6 +1408,8 @@ uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3,3])       == [1,2,3]
 */
+
+
 
 //! Q-5
 /*
