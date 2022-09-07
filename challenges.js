@@ -1440,6 +1440,28 @@ const objD = { c: 3 }
 combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 */
 
+const objA = { a: 10, b: 20, c: 30 };
+const objB = { a: 3, c: 6, d: 3 };
+const objC = { a: 5, d: 11, e: 8 };
+const objD = { c: 3 };
+
+function combine(...objs){
+    let result = {};
+    for(const o of objs){
+        for(const [key, val] of Object.entries(o)){
+            if(!result.hasOwnProperty(key)){
+                result[key] = val;
+            }else{
+                result[key] += val;
+            }
+        }
+    }
+
+   return result; 
+}
+
+console.log(combine(objA, objB));
+
 
 
 /************************************************* */
