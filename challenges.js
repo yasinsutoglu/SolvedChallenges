@@ -1518,7 +1518,20 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // console.log(countBits(1234))
 
 // *******************************QUESTION *******************************************/
-
+//Yontem-1
+// function calcFactorial(n) {
+//   let factorial = 1;
+//   for (let i = 2; i <= n; i++) factorial *= i;
+//   return factorial;
+// }
+// function strongNumber(n) {
+//   return n
+//     .toString()
+//     .split("")
+//     .reduce((total, elem) => total + calcFactorial(elem), 0) == n
+//     ? "STRONG!!!!"
+//     : "Not Strong !!";
+// }
 
 
 
