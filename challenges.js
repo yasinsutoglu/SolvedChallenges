@@ -1464,7 +1464,9 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 
 //*******************************QUESTION ********************************************/
-
+// Write a method, that will get an integer array as parameter and will process every number from this array.
+// Return a new array with processing every number of the input-array like this:
+// If the number has an integer square root, take this, otherwise square the number.
 
 // const rootOrSquare = (arr) => {
 //   // return arr.map((item) => (item**0.5)%1 ==0 ? item**0.5 : item**2);
@@ -1485,6 +1487,7 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 
 //*******************************QUESTION ********************************************/
+// Given an array of integers,find the sum of its positive elements
 
 // const sumOfPositives = (arr) =>{
 //   // return arr.reduce((sum,item) => sum+(item>0 ? item : 0) ,0);
@@ -1494,6 +1497,11 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // console.log(sumOfPositives([-1,5,-2,-6, 7, 9, -4]))
 
 // *******************************QUESTION ********************************************/
+// Write a function that takes an integer as input, 
+// and returns the number of bits that are equal to one in the binary representation of that number.
+//  You can guarantee that input is non-negative.
+
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
 //Yontem-1
 // const countBits = (num) => {
@@ -1518,7 +1526,8 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // console.log(countBits(1234))
 
 // *******************************QUESTION *******************************************/
-
+// Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+// For example, 145 is strong, since 1! + 4! + 5! = 1 + 24 + 120 = 145.
 
 // function calcFactorial(n) {
 //   let factorial = 1;
@@ -1532,6 +1541,13 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // console.log(strongNumber(124))
 
 //***************************************QUESTION ***************************** */
+
+// Complete the solution so that it splits the string into pairs of two characters.
+//  If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+// Examples:
+//  'abc' =>  ['ab', 'c_']
+// 'abcdef' => ['ab', 'cd', 'ef']
+
 
 // const twoPair = (str) => {
 //     let pair = "";
@@ -1549,6 +1565,8 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 //*********************************QUESTION ***************************** */
 
+//Write a function to accept two arrays. Does the first array contain all elements represented in the second array?
+
 // const containsAllElements = (arr1,arr2)=>{
 //     return arr2.every((item) => arr1.includes(item))
 // }
@@ -1557,6 +1575,7 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 
 //***********************************QUESTION ***************************** */
+//Write a function that accepts an array as a parameter and returns the first item that smaller than the average of its elements
 
 // function smallerThanAvg(arr) {
 //   const avg = arr.reduce((total, elem) => total + elem, 0) / arr.length;
