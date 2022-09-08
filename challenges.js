@@ -1495,10 +1495,31 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 // *******************************QUESTION ********************************************/
 
+//Yontem-1
+// const countBits = (num) => {
+//     let binary = num.toString(2);
+//     return binary.split("1").length - 1;
+// }
 
+//Yontem-2
+// const countBits = (num) => {
+//   let count=0;
+//   let binary = num.toString(2);
+//   binary.split("").map(item => item==1 ? count++ : null);
+//   return count;
+// };
 
+//Yontem-3
+// const countBits = (num) => {
+//     let binary = num.toString(2);
+//     return binary.match(/1/g).length;
+// };
+
+// console.log(countBits(1234))
 
 // *******************************QUESTION *******************************************/
+
+
 
 
 //***************************************QUESTION ***************************** */
