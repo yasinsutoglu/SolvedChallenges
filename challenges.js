@@ -1518,27 +1518,50 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // console.log(countBits(1234))
 
 // *******************************QUESTION *******************************************/
-//Yontem-1
+
+
 // function calcFactorial(n) {
 //   let factorial = 1;
-//   for (let i = 2; i <= n; i++) factorial *= i;
+//   for (let i = 1; i <= n; i++) factorial *= i;
 //   return factorial;
 // }
 // function strongNumber(n) {
-//   return n
-//     .toString()
-//     .split("")
-//     .reduce((total, elem) => total + calcFactorial(elem), 0) == n
-//     ? "STRONG!!!!"
-//     : "Not Strong !!";
-// }
+//   return n.toString().split("").reduce((total, elem) => total + calcFactorial(elem), 0) == n ? "STRONG!!!!" : "Not Strong !!"; 
+//}
 
-
+// console.log(strongNumber(124))
 
 //***************************************QUESTION ***************************** */
 
+// const twoPair = (str) => {
+//     let pair = "";
+//     let result = [];
+//     let arr = str.split("");
+//     str.length%2 != 0 && arr.push("_");
+//     for(let i=0; i<arr.length;i+=2){
+//         pair = arr[i] + arr[i+1];
+//         result.push(pair)
+//     }
+//     return result;
+// }
 
+// console.log(twoPair("abcde"))
 
 //*********************************QUESTION ***************************** */
 
+// const containsAllElements = (arr1,arr2)=>{
+//     return arr2.every((item) => arr1.includes(item))
+// }
+
+// console.log(containsAllElements([1,2,3,4,5,6,7,8,9],[1,2,3,4]))
+
+
 //***********************************QUESTION ***************************** */
+
+// function smallerThanAvg(arr) {
+//   const avg = arr.reduce((total, elem) => total + elem, 0) / arr.length;
+
+//   return arr.find((elem) => elem < avg);
+// }
+
+// console.log(smallerThanAvg([45,5,8,99,6]))
