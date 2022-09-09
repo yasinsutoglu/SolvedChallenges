@@ -1584,3 +1584,38 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // }
 
 // console.log(smallerThanAvg([45,5,8,99,6]))
+
+/************************************************ */
+
+// Convert a number to Roman numerals!!! 
+
+// const convertRomanNum = (num)=> {
+//     const romanNum = {
+//      "M" :1000,
+//      "CM":900,
+//       "D" :500,
+//       "CD":400,
+//       "C": 100,
+//       "XC":90,
+//       "L" :50,
+//       "XL":40,
+//       "X" :10,
+//       "IX":9,
+//       "V":5,
+//       "IV":4,
+//       "I":1,
+//     };
+
+// let letters = [];
+
+// for(let i of Object.keys(romanNum)){
+//     while(num >= romanNum[i]){
+//         letters.push(i);
+//         num -= romanNum[i];
+//     }
+// }
+// return letters.join("");
+// };
+
+
+// console.log(convertRomanNum(441))
