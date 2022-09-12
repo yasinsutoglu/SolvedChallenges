@@ -1619,3 +1619,83 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 
 // console.log(convertRomanNum(441))
+
+/****************************************** */
+
+//Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.It should remove all values from list a, which are present in list b keeping their order.
+// arrayDiff([1,2],[1]) == [2]  If a value is present in b, all of its occurrences must be removed from the other: arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+//SOLUTION
+// function arrayDiff(a, b) {
+//     let arr = [];
+//   for (let item of b) {
+//     console.log(item)
+//     for(let i=0; i<a.length;i++){
+//         if(item === a[i]){
+//              a.splice(a.indexOf(a[i]),1,"")
+//         }        
+//     }
+//   }
+//   for(let j of a){
+//     if(typeof j === "number"){
+//         arr.push(j)
+//     }
+//   }
+
+//   return arr;
+// }
+
+// console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
+// console.log(arrayDiff([1, 2], [1]));
+
+
+//2nd Way
+// function array_diff(a, b) {
+//   return a.filter((e) => !b.includes(e));
+// }
+
+//3rd Way
+//function array_diff(a, b) {
+//   return a.filter(function(x) { return b.indexOf(x) == -1; });
+// }
+
+/************************************************* */
+
+//You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
+
+// function findOutlier(integers) {
+//       let arr;
+//       if (integers.filter((el) => el % 2 == 0).length === 1) {
+//         arr = integers.filter((el) => el % 2 == 0);
+//         return arr[0];
+//       } else {
+//         arr = integers.filter((el) => el % 2 == 1 || el % 2 == -1);
+//         return arr[0];
+//       }   
+// }
+
+
+//2nd way
+// function findOutlier(integers) {
+//   return integers.slice(0, 3).filter(even).length >= 2 ? integers.find(odd) : integers.find(even);
+// }
+
+// function even(num) {
+//   return num % 2 == 0;
+// }
+// function odd(num) {
+//   return !even(num);
+// }
+
+//3rd way
+// function findOutlier(int) {
+//   var even = int.filter((a) => a % 2 == 0);
+//   var odd = int.filter((a) => a % 2 !== 0);
+//   return even.length == 1 ? even[0] : odd[0];
+// }
+
+
+// console.log(findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]));
+//  console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
+
+/************************************************* */
