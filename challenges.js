@@ -1699,3 +1699,15 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 //  console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
 
 /************************************************* */
+
+// function highAndLow(numbers) {
+//     let arr = [];
+//   const numArr = numbers.split(" ").map(el => +el);
+//   arr.push(Math.max(...numArr));
+//   arr.push(Math.min(...numArr));
+//   return arr.join(" ");
+// }
+
+// console.log(highAndLow("1 2 -3 4 5"));
+
+/************************************************* */
