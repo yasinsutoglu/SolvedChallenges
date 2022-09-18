@@ -1714,40 +1714,94 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 // Write a function n element star diamond 
 
-const diamond = function(n){
-    const m = (2*n)-1;
-    let str = "";
+// const diamond = function(n){
+//     const m = (2*n)-1;
+//     let str = "";
 
-    for(let i=0; i<n;i++){
-        const arr = Array(m).fill(" ");
-        if(i===0){
-            arr.splice((n-1),1,'*', ' ');
-            let arrStr0 = arr.join(" ");
-            str += arrStr0 + "\n"
-        }else{
-            arr.splice(n - (i + 1), 1, "*");
-            arr.splice(n + (i - 1), 1, "*");
-           let arrStr1 = arr.join(" ");
-           str+= arrStr1 + "\n";
-        }        
-    }
+//     for(let i=0; i<n;i++){
+//         const arr = Array(m).fill(" ");
+//         if(i===0){
+//             arr.splice((n-1),1,'*', ' ');
+//             let arrStr0 = arr.join("");
+//             str += arrStr0 + "\n"
+//         }else{
+//             arr.splice((n - (i + 1)), 1, "*" ," ");
+//             arr.splice((n + (i - 1)), 1, "*", " ");
+//            let arrStr1 = arr.join("");
+//            str+= arrStr1 + "\n";
+//         }        
+//     }
 
-    for(let j=n-2;j>=0;j--){
-        const arr = Array(m).fill(" ");
-        if (j === 0) {
-          arr.splice(n-1, 1, "*", " ");
-          let arrStr2 = arr.join(" ");
-          str += arrStr2 + "\n";
-        } else {
-          arr.splice(n - (j + 1), 1, "*");
-          arr.splice(n + (j - 1), 1, "*");
-          let arrStr3 = arr.join(" ");
-          str += arrStr3 + "\n";          
-        }          
-    }
-    return str; 
-}
+//     for(let j=n-2;j>=0;j--){
+//         const arr = Array(m).fill(" ");
+//         if (j === 0) {
+//           arr.splice(n-1, 1, "*", " ");
+//           let arrStr2 = arr.join("");
+//           str += arrStr2 + "\n";
+//         } else {
+//           arr.splice((n - (j + 1)), 1, "*" , " ");
+//           arr.splice((n + (j - 1)), 1, "*" , " ");
+//           let arrStr3 = arr.join("");
+//           str += arrStr3 + "\n";          
+//         }          
+//     }
+//     return str; 
+// }
 
 
-// const star = +prompt("Enter diamond star number");
-console.log(diamond(8));
+// // const star = +prompt("Enter diamond star number");
+// console.log(diamond(5))
+
+// const input = document.getElementById("number1");
+// const draw = document.getElementById("draw1");
+// const result = document.getElementById("result");
+
+// draw.addEventListener("click", () => {
+//   result.value = `${diamond(+input.value)}`;
+// });
+
+//2.YONTEM
+
+// const input = document.getElementById("number1");
+// const draw = document.getElementById("draw1");
+// const result = document.getElementById("result");
+// const starDiamond = function (x) {
+//   let arr = [];
+//   let str = "";
+//   for (let i = 0; i < 2 * x - 1; i++) {
+//     arr.push(" ");
+//   }
+//   let counter1 = x - 1;
+//   let counter2 = x - 1;
+//   for (let i = 0; i < x; i++) {
+//     arr[counter1] = "*";
+//     arr[counter2] = "*";
+//     // console.log(arr.join(""));
+//     let arrStr1 = arr.join("");
+//     str += arrStr1 + "\n";
+//     arr[counter1] = " ";
+//     arr[counter2] = " ";
+//     counter1--;
+//     counter2++;
+//   }
+//   counter1 = 1;
+//   counter2 = 2 * x - 3;
+//   for (let i = 0; i < x - 1; i++) {
+//     arr[counter1] = "*";
+//     arr[counter2] = "*";
+//     // console.log(arr.join(""));
+//     let arrStr2 = arr.join("");
+//     str += arrStr2 + "\n";
+//     arr[counter1] = " ";
+//     arr[counter2] = " ";
+//     counter1++;
+//     counter2--;
+//   }
+//   return str;
+// };
+// // starDiamond(8);
+// draw.addEventListener("click", () => {
+//   document.getElementById("result").innerHTML = starDiamond(input.value);
+// });
+
+/************************************************* */
