@@ -1805,3 +1805,19 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 // });
 
 /************************************************* */
+
+//Sliding Window Question
+
+// function slider(arr, k) {
+//   let myArr = [];
+//   for (let i = 0; i <= arr.length - k; i++) {
+//     let myArray = arr.slice(i, i + k);
+//     console.log(myArray);
+//     myArr.push(Math.max(...myArray));
+//   }
+//   return myArr;
+// }
+// console.log(slider([10, 5, 2, 7, 8, 7], 3));
+
+/************************************************* */
+
